@@ -91,4 +91,11 @@ const motivationalQuotes = [
     "Little things make big days.",
     "It’s going to be hard, but hard does not mean impossible."
 ];
-console.log(motivationalQuotes[1])
+const paragraph = document.querySelector('.icon-container p');
+const textToAppend = motivationalQuotes[Math.floor((Math.random()*100))]
+
+// Using textContent
+paragraph.textContent=textToAppend
+
+        
+

@@ -11,18 +11,44 @@ body{
     align-items: center;
     background: #081f37; 
     font-family: "Edu VIC WA NT Beginner", cursive;
-
     font-weight: 500;
     min-height: 100vh;
 }
 .container{
    text-align: center;
     color: black;
-    max-width: 400px;
-    min-height: 100px;
+    max-width: 450px;
+    max-height: 100px;
     background-color: #5fc9f3;
-    padding: 12px 4px;
-    font-size: 20px;
+    padding: 8px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 5px;
+    
+}
+p {
+    
+    font-size: 20px;
+    line-height: 1.3; /* Decreased line height to bring the text closer to the icons */
+}
+
+.icon-container p::before, .icon-container p::after {
+    content: '';
+    display: inline-block;
+    width: 16px; /* Adjust the size as needed */
+    height: 16px;
+    vertical-align: baseline; /* Align the icon with the baseline of the text */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -2px; /* Move the icons up by 2px */
+}
+
+.icon-container p::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 290" fill="%23000000"><path d="M22.12 145v97.65h97.65V145H70.95c0-26.92 21.9-48.82 48.82-48.82V47.35c-53.93 0-97.65 43.72-97.65 97.65zm245.76-48.82V47.35c-53.93 0-97.65 43.72-97.65 97.65v97.65h97.65V145h-48.82c-.01-26.92 21.89-48.82 48.82-48.82z"/></svg>');
+    margin-right: 5px; /* Space between the icon and the text */
+}
+
+.icon-container p::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 290" fill="%23000000"><path d="M267.88 145V47.35h-97.65V145h48.82c0 26.92-21.9 48.82-48.82 48.82v48.82c53.93.01 97.65-43.71 97.65-97.64zM22.12 193.82v48.82c53.93 0 97.65-43.72 97.65-97.65V47.35H22.12V145h48.82c.01 26.92-21.89 48.82-48.82 48.82z"/></svg>');
+    margin-left: 5px; /* Space between the text and the icon */
 }
